@@ -1,8 +1,6 @@
 // Random examples because i am dumb
 #![allow(dead_code)]
-fn main() {
-
-}
+fn main() {}
 
 // Ownership
 fn ownership() {
@@ -12,21 +10,19 @@ fn ownership() {
                           // alllowed to grow
 } // after this function exits ^ var is freed. s is freed
 
-
 // Move
 fn move_vec() {
     let x = vec!["Q".to_string()]; // Assign a value to x
     let y = x; // move the value of x to y
-    // println!("{:?}", x); // Failure to reference the value x. y now owns this value
+               // println!("{:?}", x); // Failure to reference the value x. y now owns this value
     println!("{:?}", y); // This works because the value of x is assigned to y now
-
 }
 
 // Clone
 fn clone_vec() {
-    let x = vec!["Q".to_string()]; 
-    let y = x; 
-    println!("{:?}", y); 
+    let x = vec!["Q".to_string()];
+    let y = x;
+    println!("{:?}", y);
 }
 
 // loops
